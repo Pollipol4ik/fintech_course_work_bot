@@ -1,1 +1,4 @@
 rootProject.name = 'fintech_course_project'
+
+include 'bot'
+include 'scrapper'

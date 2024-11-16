@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.UUID;
 
 import static edu.bot.command.Command.MARK_PAYMENT;
-import static edu.bot.util.MessagesUtils.SELECT_LESSON_FOR_PAYMENT;
 import static edu.bot.util.MessagesUtils.NO_UNPAID_LESSONS;
 import static edu.bot.util.MessagesUtils.PAYMENT_MARKED;
+import static edu.bot.util.MessagesUtils.SELECT_LESSON_FOR_PAYMENT;
 
 @Log4j2
 @RequiredArgsConstructor
