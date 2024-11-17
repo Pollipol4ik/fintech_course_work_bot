@@ -27,7 +27,6 @@ spring:
     port: 8080
 
 app:
-
   scheduler:
     enable: true
     interval: 10s
