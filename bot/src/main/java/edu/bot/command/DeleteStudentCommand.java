@@ -11,8 +11,8 @@ import lombok.extern.log4j.Log4j2;
 import java.util.List;
 
 import static edu.bot.command.Command.DELETE_STUDENT;
-import static edu.bot.util.MessagesUtils.NO_STUDENTS_FOUND;
 import static edu.bot.util.MessagesUtils.CHOOSE_STUDENT_TO_DELETE;
+import static edu.bot.util.MessagesUtils.NO_STUDENTS_FOUND;
 
 @Log4j2
 @RequiredArgsConstructor
