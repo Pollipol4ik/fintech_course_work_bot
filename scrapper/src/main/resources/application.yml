@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: scrapper
+  jackson:
+    time-zone: UTC
+  profiles:
+    active: google
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${CLIENT_ID:}
+            client-secret: ${CLIENT_SECRET:}
+            scope:
+              - https://www.googleapis.com/auth/userinfo.profile
+              - https://www.googleapis.com/auth/userinfo.email
+              - https://www.googleapis.com/auth/drive.activity
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:8080/login/oauth2/code/google"
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth?access_type=offline
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+  server:
+    port: 8080
+
+app:
+
+  scheduler:
+    enable: true
+    interval: 10s
+    force-check-delay: 10s
+
+google:
+  api:
+    driveActivityUrl: https://driveactivity.googleapis.com
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+
+logging:
+  level:
+    root: DEBUG
